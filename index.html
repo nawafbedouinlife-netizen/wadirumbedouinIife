@@ -1,79 +1,426 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wadi Rum Bedouin Life</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- وصف الموقع -->
-  <meta name="description" content="تجربة بدوية أصيلة في وادي رم – الأردن">
+<title>Wadi Rum Bedouin Life | Jordan</title>
 
-  <!-- تنسيق بسيط -->
-  <style>
-    body {
-      margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      direction: rtl;
-      text-align: center;
-      background: #f6f1eb;
-      color: #333;
+<meta name="description" content="Discover the real Wadi Rum with Nawaf, a local Bedouin guide. Enjoy private jeep tours, hidden valleys, beautiful sunsets and unforgettable nights under the stars.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf5ed;
+    color: #30241c;
+    line-height: 1.8;
+}
+
+header {
+    background: #302016;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #f0c99b;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.hero {
+    min-height: 520px;
+    padding: 85px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #352016, #85472b, #c18a50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .welcome {
+    color: #f0c99b;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    line-height: 1.2;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 720px;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background: #edc18d;
+    color: #302016;
+    padding: 13px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 6px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: white;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #4b2c1c;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    color: #65564b;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #eee1d2;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+    color: #95512f;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #65564b;
+    font-size: 15px;
+}
+
+.about-box {
+    background: #eee0cc;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.about-box h2 {
+    text-align: center;
+    color: #4b2c1c;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    margin-bottom: 15px;
+}
+
+.plan-box {
+    background: white;
+    border: 1px solid #eee1d2;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.plan-box h2 {
+    color: #4b2c1c;
+    margin-bottom: 15px;
+}
+
+.contact {
+    max-width: none;
+    background: #352319;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    color: #f0e2d3;
+}
+
+.contact-inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+footer {
+    background: #241810;
+    color: #eee0cc;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header h2 {
+        font-size: 21px;
     }
 
-    header {
-      background: #b85c38;
-      color: white;
-      padding: 40px 20px;
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
     }
 
-    section {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
+    .hero {
+        padding: 70px 18px;
     }
 
-    h1, h2 {
-      margin-bottom: 10px;
+    .about-box {
+        padding: 25px;
     }
-
-    .contact {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 15px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>وادي رم – حياة بدوية</h1>
-    <p>تجربة أصيلة في قلب الصحراء الأردنية</p>
-  </header>
+<header>
+    <h2>Wadi Rum Bedouin Life</h2>
 
-  <section>
-    <h2>من نحن</h2>
+    <nav>
+        <a href="#experiences">Experiences</a>
+        <a href="#about">About Us</a>
+        <a href="#visit">Plan Your Visit</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<div class="hero">
+    <div class="welcome">WELCOME TO WADI RUM, JORDAN</div>
+
+    <h1>Discover the Magic of the Desert</h1>
+
     <p>
-      نقدّم تجربة بدوية حقيقية في وادي رم، تشمل الإقامة، الجولات الصحراوية،
-      الطعام التقليدي، ومشاهدة النجوم في أجواء هادئة وبعيدة عن الزحمة.
+        Explore the incredible landscapes of Wadi Rum with a local
+        Bedouin guide. Discover hidden valleys, enjoy beautiful sunsets
+        and experience unforgettable nights under the stars.
     </p>
 
-    <div class="contact">
-      <h2>تواصل معنا</h2>
-      <p>📞 هاتف / واتساب</p>
-      <p><strong>+962 778 617 191</strong></p>
-    </div>
-  </section>
+    <a class="button"
+       href="https://wa.me/962778617191?text=Hello%20Nawaf!%20I%20am%20interested%20in%20a%20Wadi%20Rum%20tour."
+       target="_blank"
+       rel="noopener">
+       Book Your Desert Experience
+    </a>
+</div>
 
-  <footer>
-    © 2026 Wadi Rum Bedouin Life
-  </footer>
+<section id="experiences">
+
+    <h2 class="section-title">Our Desert Experiences</h2>
+
+    <p class="section-intro">
+        Discover the real Wadi Rum through personal experiences,
+        breathtaking landscapes and traditional Bedouin hospitality.
+        Every visit is an opportunity to experience the desert in a
+        special way.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>4x4 Jeep Tours</h3>
+            <p>
+                Explore red sand dunes, sandstone mountains, ancient
+                inscriptions, natural rock bridges and spectacular
+                desert landscapes by 4x4 jeep.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Hidden Valleys</h3>
+            <p>
+                Discover quieter corners of Wadi Rum away from the busy
+                routes. Enjoy gentle walks through beautiful valleys
+                and canyons surrounded by magnificent mountains.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sunset Experience</h3>
+            <p>
+                Watch the desert change colour as the sun disappears
+                behind the mountains. Relax, enjoy the peaceful
+                atmosphere and take in the beauty of the desert.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sleep Under the Stars</h3>
+            <p>
+                Spend a memorable night in the desert, enjoy traditional
+                Bedouin hospitality and admire the night sky.
+                Ask us about our camp and cave overnight experiences.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Bedouin Life</h3>
+            <p>
+                Share traditional Bedouin tea, learn about local customs
+                and discover the desert with a guide who was born and
+                raised in Wadi Rum.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Camel Rides</h3>
+            <p>
+                Experience a traditional way of travelling through
+                the desert. Enjoy the scenery and discover Wadi Rum
+                at a slower, more peaceful pace.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+
+    <div class="about-box">
+
+        <h2>Meet Your Local Bedouin Guide</h2>
+
+        <p>
+            Marhaba! My name is Nawaf. I was born and raised in
+            Wadi Rum, Jordan, and I have around ten years of experience
+            welcoming visitors to my homeland.
+        </p>
+
+        <p>
+            I love sharing the beauty of the desert, its hidden places,
+            Bedouin traditions and the stories of our land.
+            For me, a desert tour is more than visiting famous places.
+            It is an opportunity to experience the atmosphere and
+            lifestyle of Wadi Rum.
+        </p>
+
+        <p>
+            My goal is to offer personal experiences, peaceful moments
+            away from busy routes and genuine Bedouin hospitality.
+            I look forward to welcoming you to my desert home.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="visit">
+
+    <div class="plan-box">
+
+        <h2>Plan Your Visit to Wadi Rum</h2>
+
+        <p>
+            Tell us your travel date, the number of people in your group
+            and the kind of experience you are looking for.
+            We will help you choose a suitable tour and confirm
+            the meeting arrangements.
+        </p>
+
+        <p>
+            The usual meeting point is Wadi Rum Village.
+            Please contact us before arrival to confirm the details.
+        </p>
+
+        <a class="button"
+           href="https://wa.me/962778617191?text=Hello%20Nawaf!%20I%20would%20like%20to%20plan%20my%20visit%20to%20Wadi%20Rum."
+           target="_blank"
+           rel="noopener">
+           Plan Your Trip on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <div class="contact-inner">
+
+        <h2>Let's Explore Wadi Rum Together</h2>
+
+        <p>
+            Have a question or want to arrange a private desert tour?
+            Contact me directly on WhatsApp.
+            I will be happy to help you plan your experience.
+        </p>
+
+        <a class="button"
+           href="https://wa.me/962778617191?text=Hello%20Nawaf!%20I%20am%20interested%20in%20a%20Wadi%20Rum%20tour."
+           target="_blank"
+           rel="noopener">
+           Contact Nawaf on WhatsApp
+        </a>
+
+        <p style="margin-top:25px;">
+            Wadi Rum Village, Wadi Rum, Jordan
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p><strong>Wadi Rum Bedouin Life</strong></p>
+    <p>Local Bedouin Tours & Desert Experiences</p>
+    <p>© 2026 Wadi Rum Bedouin Life. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
